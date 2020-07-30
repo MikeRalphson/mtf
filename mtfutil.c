@@ -128,7 +128,7 @@ void dump(char *name)
 {
 	int handle;
 
-	handle = open(name, O_WRONLY | O_TRUNC | O_CREAT);
+	handle = open(name, O_WRONLY | O_TRUNC | O_CREAT, 0644);
 	if (handle != -1)
 	{
 		write(handle, tBuffer, remaining);
